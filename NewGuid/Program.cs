@@ -8,12 +8,11 @@ namespace NewGuid
         [STAThread]
         private static void Main(string[] args)
         {
-            var guid = Guid.NewGuid();
             var format = args.Length > 0 ? args[0] : "N";
 
             try
             {
-                var formattedGuid = guid.ToString(format);
+                var formattedGuid = Guid.NewGuid().ToString(format);
 
                 Clipboard.SetText(formattedGuid);
 
